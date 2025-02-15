@@ -1,5 +1,7 @@
 import CategoriesList from "@/components/CategoriesList";
 import Image from "next/image";
+import { postData } from "@/data";
+import Startupcard from "@/components/Startupcard";
 
 export default function Home() {
   return (
@@ -15,11 +17,21 @@ export default function Home() {
       </section>
       <section className="section_container" > 
         <p className="text-30-bold text-center font-work-sans font-extrabold">All Post </p>
+        <section className=" ml-96 mt-20">
+        <CategoriesList/>
+        </section>
+        {/* <ul className="mt-7 card_grid">
+          {postData && postData.length > 0 ? (
+            postData.map((post: StartupCardType, index: number) => (
+              <Startupcard key={post.id} post={post} />
+            ))
+          ) : (
+            <p className="no_results">No Posts Found</p>
+          )}
+        </ul> */}
       </section>
 
-      <section className=" my-10 ml-10">
-        <CategoriesList/>
-      </section>
+
 
       
 
